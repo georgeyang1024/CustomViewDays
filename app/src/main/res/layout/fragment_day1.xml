@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:day1="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.wxp.customview.Day1Fragment">
+
+    <com.wxp.customview.Day1View
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        day1:titleColor="#ff00a6ff"
+        day1:titleSize="20dp"
+        day1:titleText="1024" />
+
+    <com.wxp.customview.Day1View
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        day1:titleColor="#00ff00"
+        day1:titleSize="20dp"
+        day1:titleText="1024" />
+
+</LinearLayout>

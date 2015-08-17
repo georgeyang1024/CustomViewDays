@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <attr name="titleText" format="string" />
+    <attr name="titleColor" format="color" />
+    <attr name="titleSize" format="dimension" />
+    
+    <declare-styleable name="Day1View">
+        <attr name="titleText" />
+        <attr name="titleColor" />
+        <attr name="titleSize" />
+        <attr name="titleBackground" format="color" />
+    </declare-styleable>
+</resources>
