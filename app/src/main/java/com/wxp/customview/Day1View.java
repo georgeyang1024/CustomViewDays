@@ -15,9 +15,9 @@ import java.util.Random;
 
 /**
  * CustomView Day1
- * Created by wxp on 2015/8/17.
  * 自定义View实现点击数字加1
  * 参考网址：http://blog.csdn.net/lmj623565791/article/details/24252901
+ * Created by wxp on 2015/8/17.
  */
 public class Day1View extends View {
     private Paint mPaint = new Paint();
