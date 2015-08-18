@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    android:gravity="center"
+    android:gravity="center_horizontal"
     tools:context="com.wxp.customview.Day2Fragment">
 
    <com.wxp.customview.Day2View
+       android:layout_margin="2dp"
+       android:background="#0000ff"
        day2:imgSrc="@drawable/whisper"
        day2:imgScleType="center"
        day2:textContent="whisper"
@@ -16,5 +18,27 @@
        day2:textSize="16dp"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content" />
+
+    <com.wxp.customview.Day2View
+        android:layout_margin="2dp"
+        android:background="#0000ff"
+        day2:imgSrc="@drawable/whisper"
+        day2:imgScleType="fillXY"
+        day2:textContent="whisperwhisperwhisperwhisperwhisperwhisperwhisper"
+        day2:textColor="#00ff00"
+        day2:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.wxp.customview.Day2View
+        android:layout_margin="2dp"
+        android:background="#0000ff"
+        day2:imgSrc="@drawable/whisper"
+        day2:imgScleType="center"
+        day2:textContent="whisperwhisperwhisperwhisperwhisperwhisperwhisper"
+        day2:textColor="#00ff00"
+        day2:textSize="16dp"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

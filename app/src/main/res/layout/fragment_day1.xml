@@ -26,4 +26,13 @@
         day1:titleSize="20dp"
         day1:titleText="1024" />
 
+    <com.wxp.customview.Day1View
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        day1:titleColor="#00ff00"
+        day1:titleSize="20dp"
+        day1:titleText="whisper" />
+
 </LinearLayout>
