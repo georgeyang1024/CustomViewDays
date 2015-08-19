@@ -58,6 +58,9 @@ public class Day2View extends View {
                     break;
 
                 case R.styleable.Day2View_imgScleType:
+                    /**
+                     * Point1:自定义View注册属性enum的使用
+                     */
                     mImgScaleType = array.getInt(attr, 0);
                     break;
                 case R.styleable.Day2View_textContent:
@@ -92,14 +95,20 @@ public class Day2View extends View {
         if (widthMode == MeasureSpec.EXACTLY) {
             mWidth = widthSize;
         } else {
-            int measureWidth = getMeasuredWidth();
-            int measureHeight = getMeasuredHeight();
 
             int titleWidth = mTextBounds.width();
             int imgWidth = mBmp.getWidth();
 
             if (widthMode == MeasureSpec.AT_MOST) {
+                /**
+                 * Point2：如果宽度是包裹内容，则取图片和标题宽度的较大值
+                 */
                 int maxWidth = Math.max(titleWidth, imgWidth);
+                /**
+                 * Point3： 如果宽度值设置的是wrap_content，一开始计算出来的宽度widthSize其实是屏幕宽度。
+                 * 有可能maxWidth比屏幕宽度还宽，也有可能没有屏幕宽。因此要取最小值
+                 */
+                Log.e("wxp", "wxp-onMeasure" + (maxWidth + getPaddingLeft() + getPaddingRight()) + " | " + widthSize);
                 mWidth = Math.min(maxWidth + getPaddingLeft() + getPaddingRight(), widthSize);
             }
 
@@ -124,16 +133,23 @@ public class Day2View extends View {
         super.onDraw(canvas);
         Log.e("wxp", "wxp-onDraw" + mWidth + " | " + mHeight);
 
+        /**
+         * Point4：通过bounds设置图片绘制的边界
+         */
         mImgBounds.left = getPaddingLeft();
         mImgBounds.top = getPaddingTop();
         mImgBounds.right = mWidth - getPaddingRight();
         mImgBounds.bottom = mHeight - getPaddingBottom();
 
+        /**
+         * Point5：根据自定义属性imgScleType设置的值来绘制图像
+         */
         if (mImgScaleType == TYPE_FILLXY) {
             canvas.drawBitmap(mBmp, null, mImgBounds, mPaint);
         } else {
             /**
-             * 这里为什么可以直接用mWidth/2-mBmp.getWidth()/2？因为mWidth在之前已经measure过了，宽度已经包含了图片的宽度。
+             * Point6：这里为什么可以直接用mWidth/2-mBmp.getWidth()/2？因为mWidth在之前已经measure过了，宽度已经包含了图片的宽度。
+             * 此外由于设置了mImgScaleType的属性为center，所以要限制图像绘制的范围
              */
             mImgBounds.left = mWidth / 2 - mBmp.getWidth() / 2;
             mImgBounds.right = mWidth / 2 + mBmp.getWidth() / 2;
@@ -143,10 +159,13 @@ public class Day2View extends View {
         }
 
         /**
-         * 当宽度设置为固定值时，文字宽度有可能会大于view 的宽度
+         * Point7：当宽度设置为固定值时，文字宽度有可能会大于view 的宽度
          */
         if (mTextBounds.width() > mWidth) {
             TextPaint paint = new TextPaint(mPaint);
+            /**
+             * Point8：文字超过宽度时，设置用...隐藏多余文字
+             */
             String msg = TextUtils.ellipsize(mTextContent, paint, (float) mWidth - getPaddingLeft() - getPaddingRight(),
                     TextUtils.TruncateAt.END).toString();
             canvas.drawText(msg, getPaddingLeft(), mHeight - getPaddingBottom(), mPaint);
