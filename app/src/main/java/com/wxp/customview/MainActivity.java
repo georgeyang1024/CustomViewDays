@@ -21,14 +21,17 @@ public class MainActivity extends ActionBarActivity implements OnFragmentInterac
     private ArrayAdapter<String> mAdapter = null;
     private List<String> mAllViews = new ArrayList<String>();
     private Day1Fragment mDay1Fragment = new Day1Fragment();
-    private Day2Fragment mDay2Fragment = new Day2Fragment();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mAllViews.add("Day1Fragment");
-        mAllViews.add("Day2Fragment");
+        String[] views = getResources().getStringArray(R.array.views);
+        for (String view : views) {
+            mAllViews.add(view);
+        }
         mAdapter = new ArrayAdapter<String>(this,R.layout.main_recydemo_item,R.id.id_item_name,mAllViews);
         mLv = (ListView) findViewById(R.id.id_main_lv);
         mLv.setAdapter(mAdapter);

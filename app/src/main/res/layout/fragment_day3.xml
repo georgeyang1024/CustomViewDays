@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:day3="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:gravity="center_horizontal"
+    tools:context="com.wxp.customview.Day2Fragment">
+
+
+    <com.wxp.customview.Day3View
+        android:layout_margin="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        day3:firstColor="#ff006fff"
+        day3:secondColor="#ffffd200"
+        day3:innerWidth="20dp"
+        day3:progressWidth="10dp"
+        day3:duration="10"/>
+
+    <com.wxp.customview.Day3View
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        day3:firstColor="#ff9400ff"
+        day3:secondColor="#ff00ffc6"
+        day3:innerWidth="20dp"
+        day3:progressWidth="10dp"
+        day3:duration="5"/>
+
+    <com.wxp.customview.Day3View
+        android:layout_margin="10dp"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        day3:firstColor="#ffff0e00"
+        day3:secondColor="#ffffef00"
+        day3:innerWidth="20dp"
+        day3:progressWidth="5dp"
+        day3:duration="5"/>
+</LinearLayout>

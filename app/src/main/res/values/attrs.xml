@@ -3,7 +3,7 @@
     <attr name="titleText" format="string" />
     <attr name="titleColor" format="color" />
     <attr name="titleSize" format="dimension" />
-    
+
     <declare-styleable name="Day1View">
         <attr name="titleText" />
         <attr name="titleColor" />
@@ -20,6 +20,14 @@
         <attr name="imgScleType">
             <enum name="fillXY" value="0" />
             <enum name="center" value="1" />
-         </attr>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Day3View">
+        <attr name="firstColor" format="color" />
+        <attr name="secondColor" format="color" />
+        <attr name="innerWidth" format="dimension" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="duration" format="integer" />
     </declare-styleable>
 </resources>
