@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:day4="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:gravity="center_horizontal"
+    tools:context="com.wxp.customview.Day4Fragment">
+
+
+    <com.wxp.customview.Day4View
+        android:layout_margin="10dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        day4:day4FirstColor="#00ffff"
+        day4:day4SecondColor="#ffff00"
+        day4:day4CircleWidth="20dp"
+        day4:dotCount="10"
+        day4:splitSize="10"
+        day4:day4Bg="@drawable/volume"
+        />
+
+</LinearLayout>

@@ -30,4 +30,15 @@
         <attr name="progressWidth" format="dimension" />
         <attr name="duration" format="integer" />
     </declare-styleable>
+
+
+
+    <declare-styleable name="Day4View">
+        <attr name="day4FirstColor" format="color" />
+        <attr name="day4SecondColor" format="color" />
+        <attr name="day4CircleWidth" format="dimension" />
+        <attr name="dotCount" format="integer" />
+        <attr name="splitSize" format="integer" />
+        <attr name="day4Bg" format="reference"></attr>
+    </declare-styleable>
 </resources>
