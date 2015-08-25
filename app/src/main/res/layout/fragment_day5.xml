@@ -1,0 +1,168 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.wxp.customview.Day5Fragment">
+
+    <com.wxp.customview.Day5View
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="#00ff00">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#ffff5efe"
+            android:gravity="center"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#00ffff"
+            android:gravity="center"
+            android:text="1" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#ff3d3fff"
+            android:gravity="center"
+            android:text="2" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#ffff8c39"
+            android:gravity="center"
+            android:text="3" />
+
+
+    </com.wxp.customview.Day5View>
+
+    <com.wxp.customview.Day5View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#00ff00">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#ffff5efe"
+            android:gravity="center"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#00ffff"
+            android:gravity="center"
+            android:text="1" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#ff3d3fff"
+            android:gravity="center"
+            android:text="2" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#ffff8c39"
+            android:gravity="center"
+            android:text="3" />
+
+    </com.wxp.customview.Day5View>
+
+    <com.wxp.customview.Day5View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#00ff00">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="#00ffff"
+            android:gravity="center"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#ff3d3fff"
+            android:gravity="center"
+            android:text="1" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#ffff8c39"
+            android:gravity="center"
+            android:text="2" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="#ffff5efe"
+            android:gravity="center"
+            android:text="3" />
+    </com.wxp.customview.Day5View>
+
+    <com.wxp.customview.Day5View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="#00ff00">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="#00ffff"
+            android:gravity="center"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#ff3d3fff"
+            android:gravity="center"
+            android:text="1" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="#ffff8c39"
+            android:gravity="center"
+            android:text="2" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="#ffff5efe"
+            android:gravity="center"
+            android:text="3" />
+    </com.wxp.customview.Day5View>
+
+</LinearLayout>

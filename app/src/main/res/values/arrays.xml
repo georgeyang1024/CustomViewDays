@@ -5,5 +5,6 @@
         <item>Day2Fragment</item>
         <item>Day3Fragment</item>
         <item>Day4Fragment</item>
+        <item>Day5Fragment</item>
     </string-array>
 </resources>
