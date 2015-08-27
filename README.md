@@ -52,3 +52,14 @@ CustomView Day5
 效果图：
 
 ![/imgs/day5.jpg](/imgs/day5.jpg)
+
+- - -
+
+CustomView Day6
+
+* 自定义View实现FlowLayout
+* 参考网址：http://blog.csdn.net/lmj623565791/article/details/38352503
+
+效果图：
+
+![/imgs/day6.jpg](/imgs/day6.jpg)

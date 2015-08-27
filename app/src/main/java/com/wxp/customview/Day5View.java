@@ -10,7 +10,7 @@ import android.view.ViewGroup;
  * CustomView Day5
  * 自定义ViewGroup实现四个子view分别位于四个角落
  * 参考网址：http://blog.csdn.net/lmj623565791/article/details/38339817
- * Created by Administrator on 2015/8/25.
+ * Created by wxp on 2015/8/25.
  */
 public class Day5View extends ViewGroup {
     public Day5View(Context context) {

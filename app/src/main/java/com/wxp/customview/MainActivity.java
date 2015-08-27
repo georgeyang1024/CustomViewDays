@@ -20,13 +20,12 @@ public class MainActivity extends ActionBarActivity implements OnFragmentInterac
     private ListView mLv = null;
     private ArrayAdapter<String> mAdapter = null;
     private List<String> mAllViews = new ArrayList<String>();
-    private Day1Fragment mDay1Fragment = new Day1Fragment();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         String[] views = getResources().getStringArray(R.array.views);
         for (String view : views) {
@@ -49,7 +48,13 @@ public class MainActivity extends ActionBarActivity implements OnFragmentInterac
             }
         });
 
-        getFragmentManager().beginTransaction().replace(R.id.id_main_frame, mDay1Fragment).commit();
+        try {
+            Class clazz = Class.forName(MainActivity.this.getPackageName() + "." + mAllViews.get(0));
+            Fragment fragmentInit = (Fragment) clazz.newInstance();
+            getFragmentManager().beginTransaction().replace(R.id.id_main_frame, fragmentInit).commit();
+        } catch (Exception e) {
+
+        }
     }
 
     @Override

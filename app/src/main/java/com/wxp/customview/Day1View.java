@@ -139,12 +139,12 @@ public class Day1View extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         mPaint.setColor(mTitleBackground);
-        Log.e("wxp", "wxp-left : " + mTextBounds.left);
-        Log.e("wxp", "wxp-right : " + mTextBounds.right);
-        Log.e("wxp", "wxp-top : " + mTextBounds.top);
-        Log.e("wxp", "wxp-bottom : " + mTextBounds.bottom);
-        Log.e("wxp", "wxp-height : " + mTextBounds.height());
-        Log.e("wxp", "wxp-width : " + mTextBounds.width());
+//        Log.e("wxp", "wxp-left : " + mTextBounds.left);
+//        Log.e("wxp", "wxp-right : " + mTextBounds.right);
+//        Log.e("wxp", "wxp-top : " + mTextBounds.top);
+//        Log.e("wxp", "wxp-bottom : " + mTextBounds.bottom);
+//        Log.e("wxp", "wxp-height : " + mTextBounds.height());
+//        Log.e("wxp", "wxp-width : " + mTextBounds.width());
         canvas.drawRect(0, 0, getMeasuredWidth(), getMeasuredHeight(), mPaint);
 
         mPaint.setColor(mTitleColor);
