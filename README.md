@@ -7,7 +7,7 @@ CustomView Day1
 
 效果图：
 
-![/imgs/day1.jpg](/imgs/day1.jpg)
+![/imgs/day1.png](/imgs/day1.png)
 
 - - -
 
@@ -18,7 +18,7 @@ CustomView Day2
 
 效果图：
 
-![/imgs/day2.jpg](/imgs/day2.jpg)
+![/imgs/day2.png](/imgs/day2.png)
 
 - - -
 
@@ -29,7 +29,7 @@ CustomView Day3
 
 效果图：
 
-![/imgs/day3.jpg](/imgs/day3.jpg)
+![/imgs/day3.png](/imgs/day3.png)
 
 - - -
 
@@ -40,7 +40,7 @@ CustomView Day4
 
 效果图：
 
-![/imgs/day4.jpg](/imgs/day4.jpg)
+![/imgs/day4.png](/imgs/day4.png)
 
 - - -
 
@@ -51,7 +51,7 @@ CustomView Day5
 
 效果图：
 
-![/imgs/day5.jpg](/imgs/day5.jpg)
+![/imgs/day5.png](/imgs/day5.png)
 
 - - -
 
@@ -62,4 +62,4 @@ CustomView Day6
 
 效果图：
 
-![/imgs/day6.jpg](/imgs/day6.jpg)
+![/imgs/day6.png](/imgs/day6.png)
