@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.wxp.customview.day7Fragment">
+
+    <com.wxp.customview.Day8View
+        android:layout_margin="10dp"
+        android:padding="50dp"
+        android:background="#ffff00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <com.wxp.customview.Day8View
+        android:layout_margin="10dp"
+        android:layout_width="5dp"
+        android:layout_height="5dp" />
+</LinearLayout>
