@@ -76,6 +76,16 @@ CustomView Day7
 
 * 自定义View实现圆角矩形图像以及圆形图像
 * 参考网址：http://blog.csdn.net/lmj623565791/article/details/24555655
-* Created by wxp on 2015/8/27.
+ Created by wxp on 2015/8/27.
 
 ![/imgs/day7.png](/imgs/day7.png)
+
+- - -
+
+CustomView Day8
+
+* 自定义View实现滑动switch
+* 参考网址 ：http://blog.csdn.net/xiaanming/article/details/8842453
+* Created by wxp on 2015/8/30.
+
+![/imgs/day8.png](/imgs/day8.png)
