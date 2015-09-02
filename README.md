@@ -32,7 +32,7 @@ CustomView Day3
 
 效果图：
 
-![/imgs/day3.png](/imgs/day3.png)
+![/imgs/day3.gif](/imgs/day3.gif)
 
 - - -
 
