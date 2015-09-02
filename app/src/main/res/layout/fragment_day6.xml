@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context="com.wxp.customview.Day6Fragment">
 
-    <com.wxp.customview.Day6View
+    <views.Day6View
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -117,12 +117,12 @@
             android:gravity="center"
             android:text="12" />
 
-    </com.wxp.customview.Day6View>
+    </views.Day6View>
 
 
 
 
-    <com.wxp.customview.Day6View
+    <views.Day6View
         android:layout_width="260dp"
         android:layout_height="200dp"
         android:layout_margin="5dp"
@@ -233,9 +233,9 @@
             android:gravity="center"
             android:text="12" />
 
-    </com.wxp.customview.Day6View>
+    </views.Day6View>
 
-    <com.wxp.customview.Day6View
+    <views.Day6View
         android:layout_width="260dp"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
@@ -346,6 +346,6 @@
             android:gravity="center"
             android:text="12" />
 
-    </com.wxp.customview.Day6View>
+    </views.Day6View>
 
 </LinearLayout>

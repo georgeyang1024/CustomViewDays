@@ -8,7 +8,7 @@
     tools:context="com.wxp.customview.day7Fragment">
 
 
-    <com.wxp.customview.Day7View
+    <views.Day7View
         android:background="#ffff00"
         android:padding="20dp"
         android:layout_margin="10dp"
@@ -18,7 +18,7 @@
         day7:type="circle"
         />
 
-    <com.wxp.customview.Day7View
+    <views.Day7View
         android:background="#ffff00"
         android:padding="20dp"
         android:layout_margin="10dp"
@@ -28,7 +28,7 @@
         day7:type="circle"
         />
 
-    <com.wxp.customview.Day7View
+    <views.Day7View
         android:background="#ffff00"
         android:padding="20dp"
         android:layout_margin="10dp"

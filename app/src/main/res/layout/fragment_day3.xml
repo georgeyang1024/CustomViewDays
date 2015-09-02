@@ -9,7 +9,7 @@
     tools:context="com.wxp.customview.Day2Fragment">
 
 
-    <com.wxp.customview.Day3View
+    <views.Day3View
         android:layout_margin="10dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -19,7 +19,7 @@
         day3:progressWidth="10dp"
         day3:duration="10"/>
 
-    <com.wxp.customview.Day3View
+    <views.Day3View
         android:layout_margin="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         day3:progressWidth="10dp"
         day3:duration="5"/>
 
-    <com.wxp.customview.Day3View
+    <views.Day3View
         android:layout_margin="10dp"
         android:layout_width="48dp"
         android:layout_height="30dp"

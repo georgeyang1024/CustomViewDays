@@ -9,7 +9,7 @@
     tools:context="com.wxp.customview.Day4Fragment">
 
 
-    <com.wxp.customview.Day4View
+    <views.Day4View
         android:layout_margin="10dp"
         android:layout_width="300dp"
         android:layout_height="300dp"

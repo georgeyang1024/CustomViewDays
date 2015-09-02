@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.wxp.customview.Day1Fragment">
 
-    <com.wxp.customview.Day1View
+    <views.Day1View
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_margin="10dp"
@@ -16,7 +16,7 @@
         day1:titleSize="20dp"
         day1:titleText="1024" />
 
-    <com.wxp.customview.Day1View
+    <views.Day1View
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         day1:titleSize="20dp"
         day1:titleText="1024" />
 
-    <com.wxp.customview.Day1View
+    <views.Day1View
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

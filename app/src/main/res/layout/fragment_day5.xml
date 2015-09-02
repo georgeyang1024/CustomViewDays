@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context="com.wxp.customview.Day5Fragment">
 
-    <com.wxp.customview.Day5View
+    <views.Day5View
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_margin="10dp"
@@ -45,9 +45,9 @@
             android:text="3" />
 
 
-    </com.wxp.customview.Day5View>
+    </views.Day5View>
 
-    <com.wxp.customview.Day5View
+    <views.Day5View
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -85,9 +85,9 @@
             android:gravity="center"
             android:text="3" />
 
-    </com.wxp.customview.Day5View>
+    </views.Day5View>
 
-    <com.wxp.customview.Day5View
+    <views.Day5View
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -124,9 +124,9 @@
             android:background="#ffff5efe"
             android:gravity="center"
             android:text="3" />
-    </com.wxp.customview.Day5View>
+    </views.Day5View>
 
-    <com.wxp.customview.Day5View
+    <views.Day5View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
@@ -163,6 +163,6 @@
             android:background="#ffff5efe"
             android:gravity="center"
             android:text="3" />
-    </com.wxp.customview.Day5View>
+    </views.Day5View>
 
 </LinearLayout>

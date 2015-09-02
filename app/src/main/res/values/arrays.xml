@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="views" >
+        <item>Day9Fragment</item>
         <item>Day8Fragment</item>
         <item>Day7Fragment</item>
         <item>Day6Fragment</item>

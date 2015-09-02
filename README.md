@@ -89,3 +89,12 @@ CustomView Day8
 * Created by wxp on 2015/8/30.
 
 ![/imgs/day8.png](/imgs/day8.png)
+
+- - -
+
+CustomView Day9
+
+* 自定义ScrollView实现下拉选择
+* Created by wxp on 2015/8/30.
+
+![/imgs/day9.gif](/imgs/day9.gif)

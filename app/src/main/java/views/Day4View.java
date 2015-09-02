@@ -1,4 +1,4 @@
-package com.wxp.customview;
+package views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,6 +14,8 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.wxp.customview.R;
 
 /**
  * CustomView Day4

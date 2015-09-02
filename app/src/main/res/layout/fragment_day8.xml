@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context="com.wxp.customview.day7Fragment">
 
-    <com.wxp.customview.Day8View
+    <views.Day8View
         android:layout_margin="10dp"
         android:padding="50dp"
         android:background="#ffff00"
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content" />
 
 
-    <com.wxp.customview.Day8View
+    <views.Day8View
         android:layout_margin="10dp"
         android:layout_width="5dp"
         android:layout_height="5dp" />

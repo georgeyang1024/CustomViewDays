@@ -1,4 +1,4 @@
-package com.wxp.customview;
+package views;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -9,6 +9,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.wxp.customview.R;
 
 /**
  * CustomView Day8

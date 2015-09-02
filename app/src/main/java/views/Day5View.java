@@ -1,4 +1,4 @@
-package com.wxp.customview;
+package views;
 
 import android.content.Context;
 import android.util.AttributeSet;
