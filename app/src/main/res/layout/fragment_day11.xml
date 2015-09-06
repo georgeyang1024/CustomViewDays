@@ -2,8 +2,8 @@
     android:id="@+id/id_ll_header"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00ffff"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#00ffff">
 
     <views.Day10View
         android:layout_width="match_parent"
