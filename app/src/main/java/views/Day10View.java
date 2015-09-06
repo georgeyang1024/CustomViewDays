@@ -62,7 +62,7 @@ public class Day10View extends ViewGroup {
         }
     }
 
-    
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
