@@ -12,7 +12,7 @@ import android.widget.Scroller;
 
 /**
  * CustomView Day10
- * 自定义ViewGroup实现竖向引导界面Step1
+ * 自定义ViewGroup实现竖向引导界面Step1，首先来实现控制可以随着手指滑动上下滚动
  * 参考网址：http://blog.csdn.net/lmj623565791/article/details/23692439
  * Created by wxp on 2015/9/2.
  */
@@ -73,14 +73,10 @@ public class Day10View extends ViewGroup {
     }
 
     boolean mIsScrolling = false;
-    int mLastY = 0;
-
-    int mStartY = 0;
-    int mEndY = 0;
     /**
      * 移动时不断更新的Y值
      */
-    int mY = 0;
+    int mLastY = 0;
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
@@ -102,45 +98,32 @@ public class Day10View extends ViewGroup {
                  *Point6 ：手指按下时获取Y轴滚动的距离。
                  * getScrollY()是View的方法，如果为正表示内容向上滑动
                  */
-                mStartY = getScrollY();
-                mY = y;
-                Log.e("wxp", "wxp-mStartY ："+mStartY+ " | mY : "+mY);
+                mLastY = y;
                 break;
 
             case MotionEvent.ACTION_MOVE:
-                if (mScroller.isFinished()) {
-                    Log.e("wxp", "wxp-mScroller.isFinished()");
-                    mScroller.abortAnimation();
-                }
 
-                int dy = mY - y;
+                /**
+                 * Point7 : 计算Y轴滚动的差值
+                 */
+                int dy = mLastY - y;
 
-                Log.e("wxp", "dy : "+dy);
-
+                /**
+                 * Point8 : 调用scrollBy执行滚动
+                 */
                 scrollBy(0, dy);
-                mY = y;
+
+                /**
+                 * Point9 ： 这一步很重要，在手指尚未抬起时，要将y赋值给mLastY，接着继续执行Point7计算差值
+                 */
+                mLastY = y;
                 break;
 
             case MotionEvent.ACTION_UP:
 
-                mEndY = getScrollY();
-                mIsScrolling = true;
-                Log.e("wxp", "mEndY : "+mEndY);
-                postInvalidate();
                 break;
         }
         return true;
     }
 
-    @Override
-    public void computeScroll() {
-        super.computeScroll();
-
-        if (mScroller.computeScrollOffset()) {
-            scrollTo(0, mScroller.getCurrY());
-            Log.e("wxp", "wxp-mScroller.getCurrY() : "+mScroller.getCurrY());
-            postInvalidate();
-        }
-        mIsScrolling = false;
-    }
 }
