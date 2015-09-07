@@ -103,8 +103,18 @@ CustomView Day9
 
 CustomView Day10
 
-* 自定义ViewGroup实现竖向引导界面Step1，首先来实现控制可以随着手指滑动上下滚动
+* 自定义ViewGroup实现竖向引导界面Part1，首先来实现控制可以随着手指滑动上下滚动
 * 参考网址：http://blog.csdn.net/lmj623565791/article/details/23692439
-* Created by wxp on 2015/9/2.
+* Created by wxp on 2015/9/6.
 
- ![/imgs/day10.gif](/imgs/day10.gif)
+![/imgs/day10.gif](/imgs/day10.gif)
+
+- - -
+
+CustomView Day11
+
+* 自定义ViewGroup实现竖向引导界面Part2，实现自动滚动到上一屏或者下一屏
+* 参考网址：http://blog.csdn.net/lmj623565791/article/details/23692439
+* Created by wxp on 2015/9/7.
+
+![/imgs/day11.gif](/imgs/day11.gif)

@@ -12,9 +12,9 @@ import android.widget.Scroller;
 
 /**
  * CustomView Day10
- * 自定义ViewGroup实现竖向引导界面Step1，首先来实现控制可以随着手指滑动上下滚动
+ * 自定义ViewGroup实现竖向引导界面Part1，首先来实现控制可以随着手指滑动上下滚动
  * 参考网址：http://blog.csdn.net/lmj623565791/article/details/23692439
- * Created by wxp on 2015/9/2.
+ * Created by wxp on 2015/9/6.
  */
 public class Day10View extends ViewGroup {
     int mScreenHeight = 0;
@@ -81,14 +81,7 @@ public class Day10View extends ViewGroup {
     public boolean onTouchEvent(MotionEvent event) {
 
         /**
-         * Point5 ：如果正在滚动则直接返回父类的onTouchEvent方法
-         */
-        if (mIsScrolling) {
-            return super.onTouchEvent(event);
-        }
-
-        /**
-         * 获取当前手指位置的Y坐标
+         * Point5：获取当前手指位置的Y坐标
          */
         int y = (int) event.getY();
         switch (event.getAction()) {
