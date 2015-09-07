@@ -95,13 +95,11 @@ public class Day11View extends ViewGroup {
         switch (event.getAction()) {
 
             case MotionEvent.ACTION_DOWN:
-                Log.e("wxp", "wxp-MotionEvent.ACTION_DOWN");
                 /**
                  *Point7 ：手指按下时获取Y轴滚动的距离。
                  * getScrollY()是View的方法，如果为正表示内容向上滑动
                  */
                 mLastY = y;
-
                 mScrollStartY = getScrollY();
                 break;
 
@@ -162,6 +160,12 @@ public class Day11View extends ViewGroup {
                         mScroller.startScroll(0, mScrollEndY, 0, -dScrollY);
                     }
                 }
+
+                /**
+                 * 下面这一行很重要，表示抬起后，继续滑动。
+                 * 如果没有这一行，松开手指后，自动滑动过程中点击控件会停止滑动
+                 */
+                mIsScrolling = true;
                 postInvalidate();
                 break;
         }

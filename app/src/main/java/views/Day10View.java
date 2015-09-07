@@ -18,7 +18,6 @@ import android.widget.Scroller;
  */
 public class Day10View extends ViewGroup {
     int mScreenHeight = 0;
-    Scroller mScroller = null;
 
     public Day10View(Context context) {
         this(context, null, 0);
@@ -37,7 +36,6 @@ public class Day10View extends ViewGroup {
         DisplayMetrics metrics = new DisplayMetrics();
         windowManager.getDefaultDisplay().getMetrics(metrics);
         mScreenHeight = metrics.heightPixels;
-        mScroller = new Scroller(context);
     }
 
     @Override
@@ -72,7 +70,6 @@ public class Day10View extends ViewGroup {
         }
     }
 
-    boolean mIsScrolling = false;
     /**
      * 移动时不断更新的Y值
      */
