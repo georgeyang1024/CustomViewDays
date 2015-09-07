@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Scroller;
 
-public class Day10_11View extends ViewGroup
+public class Day10_12View extends ViewGroup
 {
     /**
      * 屏幕的高度
@@ -49,7 +49,7 @@ public class Day10_11View extends ViewGroup
 
     private OnPageChangeListener mOnPageChangeListener;
 
-    public Day10_11View(Context context, AttributeSet attrs)
+    public Day10_12View(Context context, AttributeSet attrs)
     {
         super(context, attrs);
 

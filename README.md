@@ -118,3 +118,13 @@ CustomView Day11
 * Created by wxp on 2015/9/7.
 
 ![/imgs/day11.gif](/imgs/day11.gif)
+
+- - -
+
+CustomView Day12
+
+* 自定义ViewGroup实现竖向引导界面Part3，实现检测加速度自动滚动到上一屏或者下一屏，以及边界检测
+* 参考网址：http://blog.csdn.net/lmj623565791/article/details/23692439
+* Created by wxp on 2015/9/7.
+
+![/imgs/day12.gif](/imgs/day12.gif)
