@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.LayoutAnimationController;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
@@ -79,11 +81,17 @@ public class Day13Fragment extends Fragment {
         mLv.setOnDelClickListener(new Day13View.OnDelClickListener() {
             @Override
             public boolean deleteItem(int pos) {
-                if ((data.get(pos)) != null) {
+                if (pos >= 0 && pos <= data.size() && (data.get(pos)) != null) {
                     data.remove(pos);
                     mAdapter.notifyDataSetChanged();
                 }
                 return false;
+            }
+        });
+        mLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mAdapter.notifyDataSetChanged();
             }
         });
         return view;

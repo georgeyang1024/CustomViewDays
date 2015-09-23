@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.view.animation.Animation;
+import android.view.animation.Transformation;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -63,6 +66,10 @@ public class Day13View extends ListView {
         mPopWidth = mPop.getContentView().getMeasuredWidth();
         mPopHeight = mPop.getContentView().getMeasuredHeight();
     }
+
+
+
+
 
     /**
      * Point4 ： 这里重写dispatchTouchEvent方法是为了判断是否需要显示PopupWindow
@@ -158,7 +165,28 @@ public class Day13View extends ListView {
                         @Override
                         public void onClick(View v) {
                             if (mOnDelClickListener != null) {
-                                mOnDelClickListener.deleteItem(mCurrentItemPos);
+
+                                Animation.AnimationListener al = new Animation.AnimationListener() {
+                                    @Override
+                                    public void onAnimationStart(Animation animation) {
+
+                                    }
+
+                                    @Override
+                                    public void onAnimationEnd(Animation animation) {
+                                        mOnDelClickListener.deleteItem(mCurrentItemPos);
+                                    }
+
+                                    @Override
+                                    public void onAnimationRepeat(Animation animation) {
+
+                                    }
+                                };
+                                /**
+                                 * Point15 ： 添加item删除动画
+                                 */
+                                collapse(mCurrentItemView, al);
+
                             }
                             mPop.dismiss();
                         }
@@ -169,7 +197,7 @@ public class Day13View extends ListView {
                 case MotionEvent.ACTION_UP:
 
                     /**
-                     * Point15 ： 手指抬起更新滑动状态为false
+                     *  手指抬起更新滑动状态为false
                      */
                     mIsSliding = false;
                     break;
@@ -196,5 +224,36 @@ public class Day13View extends ListView {
 
     public interface OnDelClickListener {
         boolean deleteItem(int pos);
+    }
+
+    private void collapse(final View view, Animation.AnimationListener al) {
+        final int originHeight = view.getMeasuredHeight();
+
+        Animation animation = new Animation() {
+            @Override
+            protected void applyTransformation(float interpolatedTime, Transformation t) {
+
+                /**
+                 *Point16 ： 注意此处判断的值需小于1.否则会界面上多删除一个item
+                 */
+                if (interpolatedTime == 0.9f) {
+                    view.setVisibility(View.GONE);
+                } else {
+                    view.getLayoutParams().height = originHeight - (int) (originHeight * interpolatedTime);
+                    view.requestLayout();
+                }
+            }
+
+            @Override
+            public boolean willChangeBounds() {
+                return true;
+            }
+        };
+        if (al != null) {
+            animation.setAnimationListener(al);
+        }
+        animation.setDuration(200);
+        view.startAnimation(animation);
+        Log.e("day13", "wxp-length startAnimation");
     }
 }
