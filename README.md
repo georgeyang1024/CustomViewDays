@@ -128,3 +128,13 @@ CustomView Day12
 * Created by wxp on 2015/9/7.
 
 ![/imgs/day12.gif](/imgs/day12.gif)
+
+- - -
+
+CustomView Day1
+
+* 自定义ListView实现左滑出现删除按钮
+* 参考网址：http://blog.csdn.net/lmj623565791/article/details/22961279
+* Created by wxp on 2015/9/22.
+
+![/imgs/day13.gif](/imgs/day13.gif)
