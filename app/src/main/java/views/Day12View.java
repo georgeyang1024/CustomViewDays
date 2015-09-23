@@ -56,25 +56,30 @@ public class Day12View extends ViewGroup {
             View childView = getChildAt(i);
             measureChild(childView, widthMeasureSpec, mScreenHeight);
         }
+        Log.e("day12", "wxp-day12 mScreenHeight : "+mScreenHeight);
     }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
 
-        int childCount = getChildCount();
-        MarginLayoutParams marginLayoutParams = (MarginLayoutParams) getLayoutParams();
-        marginLayoutParams.height = childCount * mScreenHeight;
-        setLayoutParams(marginLayoutParams);
+        if (changed) {
+            int childCount = getChildCount();
+            MarginLayoutParams marginLayoutParams = (MarginLayoutParams) getLayoutParams();
+            marginLayoutParams.height = childCount * mScreenHeight;
+            Log.e("day12", "wxp-day12 childCount : " + childCount+" | mScreenHeight : "+mScreenHeight);
+            setLayoutParams(marginLayoutParams);
 
-        for (int i = 0; i < childCount; i++) {
-            View childView = getChildAt(i);
-            childView.layout(l, i * mScreenHeight, r, (i + 1) * mScreenHeight);
+            for (int i = 0; i < childCount; i++) {
+                View childView = getChildAt(i);
+                childView.layout(l, i * mScreenHeight, r, (i + 1) * mScreenHeight);
+            }
         }
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
+        Log.e("day12", "wxp-day12 mIsScrolling : "+mIsScrolling);
         if (mIsScrolling) {
             return super.onTouchEvent(event);
         }
@@ -107,7 +112,7 @@ public class Day12View extends ViewGroup {
                  * (getScrollY() + dy) > (getHeight() - mScreenHeight)表示已经滑动到达控件底部了（控件的总的高度减去最后一个子View的高度则是最后一个控件的顶部位置）
                  * dy > 0表示还想要向上滑动
                  */
-                if ((getScrollY() + dy) > (getHeight() - mScreenHeight) && dy > 0) {
+                if ((getScrollY() + dy) > (getMeasuredHeight()*(getChildCount()-1)) && dy > 0) {
                     return super.onTouchEvent(event);
                 }
 

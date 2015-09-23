@@ -254,6 +254,6 @@ public class Day13View extends ListView {
         }
         animation.setDuration(200);
         view.startAnimation(animation);
-        Log.e("day13", "wxp-length startAnimation");
+
     }
 }

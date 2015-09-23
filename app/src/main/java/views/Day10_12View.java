@@ -134,6 +134,7 @@ public class Day10_12View extends ViewGroup
                     dy = -scrollY;
                 }
                 // 已经到达底部，上拉多少，就往下滚动多少
+
                 if (dy > 0 && scrollY + dy > getHeight() - mScreenHeight)
                 {
                     dy = getHeight() - mScreenHeight - scrollY;

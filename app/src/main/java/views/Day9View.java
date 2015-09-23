@@ -2,6 +2,7 @@ package views;
 
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -95,7 +96,13 @@ public class Day9View extends ScrollView {
         /**
          * Point2　： 设置menu区域的高度
          */
-        mMenuHeight = mMenuView.getLayoutParams().height = mScreenHeight - 8 * mMenuBottomPadding;
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            mMenuHeight = mScreenWidth - 8 * mMenuBottomPadding;
+            mMenuView.getLayoutParams().width = mScreenWidth;
+        } else {
+            mMenuHeight = mMenuView.getLayoutParams().height = mScreenHeight - 8 * mMenuBottomPadding;
+        }
+
         mHalfMenuHeight = mMenuHeight / 2;
         mQuaMenuHeight = mMenuHeight / 4;
 
@@ -116,7 +123,13 @@ public class Day9View extends ScrollView {
         /**
          * Point4　： 设置偏移量将menu隐藏
          */
-        this.scrollTo(0, mMenuHeight);
+
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            this.scrollTo(0, mMenuHeight);
+        } else {
+            this.scrollTo(0, mMenuHeight);
+        }
+
 
     }
 
