@@ -94,6 +94,9 @@ public class Day13View extends ListView {
                  */
                 mCurrentItemPos = pointToPosition(mX, mY);
                 mCurrentItemView = getChildAt(mCurrentItemPos - getFirstVisiblePosition());
+                if (mCurrentItemView == null) {
+                    return false;
+                }
                 Log.e("day13", "wxp-mCurrentItemPos : " + mCurrentItemPos + " | firstVisiblePos : " + getFirstVisiblePosition());
                 break;
 
