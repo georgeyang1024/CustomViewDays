@@ -206,10 +206,11 @@ public class Day11View extends ViewGroup {
         /**
          * Point16 ： 判断是否滚动结束
          */
+        Log.e("wxp", "wxp-mScroller.computeScrollOffset()-mScroller.getCurrY() 1 : " + mScroller.getCurrY());
         if (mScroller.computeScrollOffset()) {
 
             scrollTo(0, mScroller.getCurrY());
-            Log.e("wxp", "wxp-mScroller.computeScrollOffset()-mScroller.getCurrY() : " + mScroller.getCurrY());
+            Log.e("wxp", "wxp-mScroller.computeScrollOffset()-mScroller.getCurrY() 2 : " + mScroller.getCurrY());
             postInvalidate();
         } else {
             Log.e("wxp", "wxp-mScroller.computeScrollOffset()-else : " + mScroller.getCurrY());
