@@ -131,10 +131,26 @@ CustomView Day12
 
 - - -
 
-CustomView Day1
+CustomView Day13
 
 * 自定义ListView实现左滑出现删除按钮
 * 参考网址：http://blog.csdn.net/lmj623565791/article/details/22961279
 * Created by wxp on 2015/9/22.
 
 ![/imgs/day13.gif](/imgs/day13.gif)
+
+- - -
+
+CustomView Day14
+
+
+- - -
+
+CustomView Day15
+
+* 自定义ListView是的ListView嵌套在ScrollView中时，解决ListView与ScrollView的冲突
+* 滑动到ListView顶部后继续滑动会触发ScrollView继续滑动；
+* 滑动到ListView底部后继续滑动会触发ScrollView继续滑动。
+* Created by wxp on 2015/1023.
+
+![/imgs/day15.gif](/imgs/day15.gif)
