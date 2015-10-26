@@ -40,8 +40,8 @@ public class Day15View extends ListView {
     /**
      * ListView的父布局是ScrollView
      * requestDisallowInterceptTouchEvent方法的作用是通知父布局是否需要拦截事件。
-     * 因为GroupView默认是不拦截事件的。默认也是不处理事件的。
-     * 所以虽然ScrollView不拦截事件，但是事件回流的时候ListView也不会处理，所以最终还是交由ScrollView处理。
+     * 虽然GroupView默认是不拦截事件的。默认也是不处理事件的。
+     * 但是ScrollView继承Framelayout时重写了onInterceptTouchEvent方法，使得ScrollView可以拦截滑动事件
      */
 
     @Override

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_item_name"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303339"
+    android:gravity="center_vertical"
+    android:text="Horizontal"
+    android:textSize="18sp" />
