@@ -3,15 +3,16 @@
     android:id="@+id/id_scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#66aaee">
+    android:background="#66aaee"
+    android:orientation="vertical">
 
 
     <views.Day17View
         android:id="@+id/id_day17view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ff0000" />
+        android:background="#ff0000"
+        android:padding="20dp" />
 
     <views.Day17View
         android:id="@+id/id_day17view_1"

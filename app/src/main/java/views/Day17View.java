@@ -65,7 +65,7 @@ public class Day17View extends LinearLayout {
         int width = MeasureSpec.getSize(widthMeasureSpec);
         int height = MeasureSpec.getSize(heightMeasureSpec);
 
-
+        //宽必须是match_parent或者指定宽度值，不能为wrap_content
         mWidth = width;
 
         int childCount = getChildCount();
@@ -80,17 +80,17 @@ public class Day17View extends LinearLayout {
             mChildHeight = childView.getMeasuredHeight();
 
             if (heightMode == MeasureSpec.AT_MOST) {
-                mHeight = childView.getMeasuredHeight();
+                mHeight = childView.getMeasuredHeight() + getPaddingLeft() + getPaddingRight();
 
             } else {
 
                 if (height < childView.getMeasuredHeight()) {
-                    mHeight = childView.getMeasuredHeight();
+                    mHeight = childView.getMeasuredHeight() + +getPaddingTop() + getPaddingBottom();
                 } else {
-                    mHeight = height;
+                    mHeight = height + +getPaddingTop() + getPaddingBottom();
                 }
             }
-            Log.d("Day17onLayout", "mWidth = " + mWidth + " | mHeight =  " + mHeight + " | " + childView.getMeasuredHeight());
+            Log.d("Day17onLayout", "mWidth = " + mWidth + " | mHeight =  " + mHeight + " | mChildHeight = " + childView.getMeasuredHeight());
         }
 
         setMeasuredDimension(mWidth, mHeight);
@@ -112,16 +112,18 @@ public class Day17View extends LinearLayout {
         if (childCount > 1) {
             horSpace = (mWidth - leftPadding - rightPadding - mChildWidth * childCount) / (childCount - 1);
 
-            Log.d("Day17onLayout", "horSpace = " + horSpace + " | mChildWidth = " + mChildWidth);
+            Log.d("Day17onLayout", "horSpace = " + horSpace + " | mChildWidth = " + mChildWidth + " | mChildHeight = " + mChildHeight);
             for (int i = 0; i < childCount; i++) {
                 View childView = getChildAt(i);
 
                 int childWidth = childView.getMeasuredWidth();
                 int childHeight = childView.getMeasuredHeight();
                 int left = leftPadding + childWidth * i + horSpace * i;
-                int right = left + childWidth;
                 int top = topPadding + verSpace;
+                int right = left + childWidth;
                 int bottom = top + childHeight;
+                Log.d("Day17onLayout", "horSpace = " + horSpace + " | verSpace = " + verSpace);
+                Log.d("Day17onLayout", "leftPadding = " + leftPadding + " | topPadding = " + topPadding);
                 Log.d("Day17onLayout", left + " | " + top + " | " + right + " | " + bottom + " | ");
                 childView.layout(left, top, right, bottom);
             }
