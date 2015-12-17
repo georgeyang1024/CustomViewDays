@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#66aaee">
+
+
+    <views.Day17View
+        android:id="@+id/id_day17view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0000" />
+
+    <views.Day17View
+        android:id="@+id/id_day17view_1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#ffc800" />
+
+    <views.Day17View
+        android:id="@+id/id_day17view_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff006f" />
+
+</LinearLayout>

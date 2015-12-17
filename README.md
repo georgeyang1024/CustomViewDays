@@ -151,6 +151,19 @@ CustomView Day15
 * 自定义ListView是的ListView嵌套在ScrollView中时，解决ListView与ScrollView的冲突
 * 滑动到ListView顶部后继续滑动会触发ScrollView继续滑动；
 * 滑动到ListView底部后继续滑动会触发ScrollView继续滑动。
-* Created by wxp on 2015/1023.
+* Created by wxp on 2015/10/23.
 
 ![/imgs/day15.gif](/imgs/day15.gif)
+
+- - -
+
+CustomView Day16
+
+- - -
+
+CustomView Day17
+
+* 不定个数横向分割控件
+* Created by wxp on 2015/12/15.
+
+![/imgs/day17.png](/imgs/day17.png)
