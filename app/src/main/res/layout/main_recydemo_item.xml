@@ -2,18 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
-    android:background="#ff60ccff"
+    android:layout_height="64dp"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".MyActivity">
+    tools:context=".HomeActivity">
 
     <TextView
         android:gravity="center_vertical"
         android:id="@+id/id_item_name"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#303339"
         android:text="Horizontal"
         android:textSize="18sp" />
 </LinearLayout>
