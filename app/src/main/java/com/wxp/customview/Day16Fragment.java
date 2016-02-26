@@ -1,17 +1,17 @@
 package com.wxp.customview;
 
-import android.app.Activity;
 import android.app.Fragment;
-import android.net.Uri;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.ViewTreeObserver;
+import android.view.Window;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
+import utils.DPU;
 
 
 public class Day16Fragment extends Fragment {
@@ -55,11 +55,37 @@ public class Day16Fragment extends Fragment {
         }
     }
 
+    View view;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        final TextView textView;
+
+
+        Rect outRect = new Rect();
+
+        getActivity().getWindow().findViewById(Window.ID_ANDROID_CONTENT).getDrawingRect(outRect);
+        final int contentHeight = outRect.height();
+
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_day16, container, false);
+        view = inflater.inflate(R.layout.fragment_day16, container, false);
+        textView = (TextView) view.findViewById(R.id.id_16_tv);
+
+        view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+
+
+                Rect rect = new Rect();
+                view.getWindowVisibleDisplayFrame(rect);
+                RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, DPU.dp(60));
+                layoutParams.setMargins(0, 0, 0, contentHeight - rect.height());
+                textView.setLayoutParams(layoutParams);
+
+            }
+        });
         return view;
     }
 

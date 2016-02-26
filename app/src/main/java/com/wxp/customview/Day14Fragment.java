@@ -1,12 +1,16 @@
 package com.wxp.customview;
 
-import android.app.Activity;
 import android.app.Fragment;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import views.Day14View;
+import views.Day14_TagAdapter;
+import views.Day6View;
 
 
 public class Day14Fragment extends Fragment {
@@ -50,12 +54,53 @@ public class Day14Fragment extends Fragment {
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        View view =inflater.inflate(R.layout.fragment_day14, container, false);
+        View view = inflater.inflate(R.layout.fragment_day14, container, false);
+
         return view;
     }
 
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        final String[] data = new String[]{"111", "222", "3333", "222", "3333", "222", "3333", "222", "3333", "222", "3333", "222", "3333", "222", "3333", "222", "3333", "222", "3333", "222", "3333", "222", "3333"};
+
+        final Day14View day14View = (Day14View) view.findViewById(R.id.id_14_view);
+        day14View.setAdapter(new Day14_TagAdapter<String>(data) {
+            @Override
+            public View getView(Day6View parent, int pos, String o) {
+                TextView textView = (TextView) LayoutInflater.from(getActivity()).inflate(R.layout.tv, day14View, false);
+                textView.setText(o);
+                return textView;
+            }
+        });
+        day14View.setOnTagClickListener(new Day14View.OnTagClickListener() {
+
+            @Override
+            public boolean clickTag(View parent, int pos, View tagView) {
+                //Toast.makeText(getActivity(), "HEHE : " + data[pos], Toast.LENGTH_SHORT).show();
+                showToast(data[pos]);
+                return true;
+            }
+        });
+    }
+
+    private Toast mToast;
+    public void showToast(String content) {
+        if (mToast == null) {
+            mToast = Toast.makeText(getActivity(), content, Toast.LENGTH_SHORT);
+        }
+        mToast.setText(content);
+        mToast.show();
+    }
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+    }
 }

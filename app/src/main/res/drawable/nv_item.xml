@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/nv_item_checked" android:state_checked="true"></item>
+    <item android:drawable="@drawable/nv_item_normal"></item>
+    <!--
+    这里有个BUG，如果设置了pressed时候的drawable的话，不管点击哪个位置，所有的tag都会显示出背景色
+    -->
+    <!--<item android:drawable="@drawable/nv_item_pressed" android:state_checked="false" android:state_pressed="true" android:state_selected="false"/>-->
+    <!--<item android:drawable="@drawable/nv_item_selected" android:state_checked="false" android:state_pressed="false" android:state_selected="true"/>-->
+
+
+</selector>
