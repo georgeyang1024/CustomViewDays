@@ -50,11 +50,14 @@ public class Day14View extends Day6View implements Day14_TagAdapter.OnDataChange
         Day14_TagView tagViewContainer = null;
 
         for (int i = 0; i < adapter.getCount(); i++) {
+            /**
+             * Point1 : 注意这里的设计是把一个item通过Day14_TagView包装一下。
+             */
             View tagView = adapter.getView(this, i, adapter.getItem(i));
 
             tagViewContainer = new Day14_TagView(getContext());
             /**
-             * 使得父控件的状态变化能够向下传递
+             * Point2 : 使得父控件的状态变化能够向下传递。
              */
             tagView.setDuplicateParentStateEnabled(true);
             if (tagView.getLayoutParams() != null) {
@@ -73,6 +76,9 @@ public class Day14View extends Day6View implements Day14_TagAdapter.OnDataChange
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
+        /**
+         *Point3 :  把点击事件交给performClick处理
+         */
         if (event.getAction() == MotionEvent.ACTION_UP) {
             mMotionEvent = MotionEvent.obtain(event);
             Log.d("onTouchEvent", " onTouchEvent --> up");
@@ -92,12 +98,18 @@ public class Day14View extends Day6View implements Day14_TagAdapter.OnDataChange
         int y = (int) mMotionEvent.getY();
 
         /**
-         * 注意这里要把mMotionEvent置空
+         * Point4 : 注意这里要把mMotionEvent置空
          */
         mMotionEvent = null;
 
+        /**
+         *Point5 : 通过x，y坐标查找子view
+         */
         Day14_TagView tagView = findChildView(x, y);
 
+        /**
+         *Point6 : 查找一个view的位置。
+         */
         int pos = findPosByView(tagView);
 
         if (tagView != null) {
@@ -106,7 +118,7 @@ public class Day14View extends Day6View implements Day14_TagAdapter.OnDataChange
 
             if (mOnTagClickListener != null) {
                 /**
-                 * 这里的clickTag应该是TagView里面包装的子View
+                 *Point7 : 这里的clickTag应该是TagView里面包装的子View
                  */
                 return mOnTagClickListener.clickTag(this, pos, tagView.getTagView());
             }

@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
  * @author : wangxianpeng
  * @date : 2016/2/26
  * E-mail : wangxianpeng@jd.com
+ * Day14View标签布局中，一个标签项所对应的布局
  */
 public class Day14_TagView extends FrameLayout implements Checkable {
     boolean mIsChecked = false;
@@ -28,7 +29,14 @@ public class Day14_TagView extends FrameLayout implements Checkable {
 
     @Override
     protected int[] onCreateDrawableState(int extraSpace) {
+        /**
+         * Point1 : 根据当前View的状态属性，将其转化成一个整型数组
+         */
         int[] status = super.onCreateDrawableState(extraSpace+1);
+
+        /**
+         * Point2 : 合并状态,具体实现就是把数组CHECK_STATE添加到status数组的末尾。
+         */
         if (isChecked()) {
             mergeDrawableStates(status, CHECK_STATE);
         }
